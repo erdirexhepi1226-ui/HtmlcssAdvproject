@@ -28,6 +28,14 @@ a {
   text-decoration: none;
 }
 
+a,
+button,
+input,
+select,
+textarea {
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -74,6 +82,10 @@ img {
   color: #e7e7e7;
 }
 
+.nav-links a:hover {
+  color: var(--white);
+}
+
 .nav-button,
 .primary-btn,
 .secondary-btn {
@@ -90,10 +102,30 @@ img {
   color: var(--white);
 }
 
+.nav-button:hover,
+.primary-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
 .secondary-btn {
   background: transparent;
   border: 1px solid #d4d4d4;
   color: var(--white);
+}
+
+.secondary-btn:hover {
+  background: var(--white);
+  color: var(--dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(198, 40, 40, 0.35);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -333,6 +365,12 @@ main {
   padding: 20px;
 }
 
+.inventory-card .primary-btn {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
 .inventory-meta {
   display: flex;
   justify-content: space-between;
@@ -418,6 +456,14 @@ textarea {
   background: #fafafa;
   color: var(--dark);
   font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  background: var(--white);
 }
 
 textarea {
